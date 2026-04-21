@@ -1,0 +1,31 @@
+/* css for styling our card component -> you can bring your own css here */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin: 8px 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 4px 0;
+}
