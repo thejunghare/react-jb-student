@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const initialTodo = {
   title: "",
@@ -18,9 +18,19 @@ const App = () => {
     dateTime: "",
   });
 
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    // get all the todos from my localstorage and store inside a state variable
+    const data = Array.from(JSON.parse(localStorage.getItem("todos"))) || []; // string -> [{}]
+    console.log(data); // length zero
+    setTodos(data);
+  }, []);
+
   const handleAdd = (e) => {
     e.preventDefault();
-    console.log(todo.title, todo.description, todo.dateTime);
+    console.log(todo.title, todo.description, todo.dateTime); // store localstorage
+    localStorage.setItem("todos", JSON.stringify(todo)); //localstorage string
     setTodo({
       title: "",
       description: "",
@@ -62,6 +72,15 @@ const App = () => {
         </label>
         <button type="submit">Add todo</button>
       </form>
+
+      {/* order list */}
+      {/* array -> todos(localstorage) */}
+
+      {todos.map((todo) => (
+        <ul>
+          <li>{todo.title}</li>
+        </ul>
+      ))}
     </>
   );
 };
