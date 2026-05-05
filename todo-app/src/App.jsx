@@ -33,11 +33,11 @@ const App = () => {
   return (
     <>
       {/* Todo application: title, desc, datetime */}
-      <Form todo={todo} setTodo={setTodo} setTodos={setTodos} />
+      <Form todo={todo} setTodo={setTodo} setTodos={setTodos} todos={todos} />
       {/* order list */}
       {/* array -> todos(localstorage) */}
 
-      <List todos={todos} />
+      <List todos={todos} setTodos={setTodos} />
     </>
   );
 };

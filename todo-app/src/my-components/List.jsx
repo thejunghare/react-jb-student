@@ -1,4 +1,6 @@
-const List = ({ todos }) => {
+import {handleDelete} from '../helper.js'
+
+const List = ({ todos, setTodos }) => {
   return (
     <>
       <ul>
@@ -6,7 +8,7 @@ const List = ({ todos }) => {
           <div key={todo.dateTime}>
             <li>{todo.title}</li>
             <button>Update</button>
-            <button>Delete</button>
+            <button onClick={() => handleDelete(todo.id, todos, setTodos)}>Delete</button>
           </div>
         ))}
       </ul>

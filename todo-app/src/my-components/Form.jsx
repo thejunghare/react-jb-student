@@ -1,9 +1,9 @@
 import { handleAdd } from "../helper";
 
-const Form = ({ todo, setTodo, setTodos }) => {
+const Form = ({ todo, setTodo, setTodos, todos }) => {
   return (
     <>
-      <form onSubmit={(e) => handleAdd(e, todo, setTodo, setTodos)}>
+      <form onSubmit={(e) => handleAdd(e, todo, setTodo, setTodos, todos)}>
         <label>
           Todo:
           <input
