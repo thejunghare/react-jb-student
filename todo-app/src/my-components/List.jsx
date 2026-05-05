@@ -5,9 +5,9 @@ const List = ({ todos, setTodos }) => {
     <>
       <ul>
         {todos.map((todo) => (
-          <div key={todo.dateTime}>
+          <div key={todo.dateTime}> {/* pass id here */}
             <li>{todo.title}</li>
-            <button>Update</button>
+            <button className='border text-red-500 p-2 bg-yellow-500'>Update</button>
             <button onClick={() => handleDelete(todo.id, todos, setTodos)}>Delete</button>
           </div>
         ))}
