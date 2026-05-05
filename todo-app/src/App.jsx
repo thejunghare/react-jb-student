@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Form from "./my-components/Form";
+import List from "./my-components/List";
 
 const initialTodo = {
+  // id: "",
   title: "",
   description: "",
   dateTime: "",
@@ -35,11 +37,7 @@ const App = () => {
       {/* order list */}
       {/* array -> todos(localstorage) */}
 
-      {todos.map((todo) => (
-        <ul>
-          <li>{todo.title}</li>
-        </ul>
-      ))}
+      <List todos={todos} />
     </>
   );
 };
