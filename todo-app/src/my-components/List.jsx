@@ -1,4 +1,5 @@
 import {handleDelete} from '../helper.js'
+import { Button } from "@/components/ui/button"
 
 const List = ({ todos, setTodos }) => {
   return (
@@ -7,8 +8,8 @@ const List = ({ todos, setTodos }) => {
         {todos.map((todo) => (
           <div key={todo.dateTime}> {/* pass id here */}
             <li>{todo.title}</li>
-            <button className='border text-red-500 p-2 bg-yellow-500'>Update</button>
-            <button onClick={() => handleDelete(todo.id, todos, setTodos)}>Delete</button>
+            <Button >Update</Button>
+            <Button onClick={() => handleDelete(todo.id, todos, setTodos)}>Delete</Button>
           </div>
         ))}
       </ul>
