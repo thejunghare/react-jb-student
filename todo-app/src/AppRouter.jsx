@@ -17,6 +17,9 @@ const AppRouter = () => {
           <Link to="/see-todo" className="underline text-blue-500">
             List Todo
           </Link>
+          <Link to="/pricing" className="underline text-blue-500">
+            Pricing
+          </Link>
         </div>
 
         <Routes>

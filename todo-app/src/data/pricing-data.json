@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Basic",
+        "price": 149,
+        "description": "manage up-to 50 todos"
+    },
+     {
+        "id": 2,
+        "name": "Pro",
+        "price": 249,
+        "description": "manage up-to 150 todos"
+    }
+]
