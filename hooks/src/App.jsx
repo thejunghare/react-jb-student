@@ -1,5 +1,8 @@
 import { useState, useRef } from 'react'
 
+
+import Memo from './Memo'
+
 function App() {
   const [number, setNumber] = useState(0)
   const id = useRef(null)
@@ -17,9 +20,11 @@ function App() {
 
   return (
     <>
-      <p>{number}</p>
+      {/* <p>{number}</p>
       <button onClick={handleStart}>Start</button>
-      <button onClick={handleStop}>Stop</button>
+      <button onClick={handleStop}>Stop</button> */}
+
+      <Memo />
     </>
   )
 }
