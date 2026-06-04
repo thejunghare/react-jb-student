@@ -1,9 +1,9 @@
-import Callback from "./Callback";
+import Reducer from "./Reducer";
 
 function App() {
   return (
     <>
-      <Callback />
+      <Reducer />
     </>
   );
 }
